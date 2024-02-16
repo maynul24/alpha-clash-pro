@@ -1,6 +1,10 @@
 function handleKeyboardKeyUpEvent (event){
     const  playerPressed = event.key;
 
+    if (playerPressed === 'Escape'){
+        gameEnd();
+    }
+
     const currentAlphabetElement = document.getElementById('current-alphabet');
     const currentAlphabet = currentAlphabetElement.innerText;
     const expectedAlphabet = currentAlphabet.toLowerCase();
